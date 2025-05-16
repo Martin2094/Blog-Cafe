@@ -133,6 +133,12 @@ img {
     margin-top: 0rem;
 }
 
+.titulo {
+    border-bottom: 1px solid var(--gris);
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
 /* Navegacion */
 
 @media (min-width: 768px) {

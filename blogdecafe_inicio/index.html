@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Cafe</title>
+    <meta name="description" content="Pagina Web de Blog de Cafe">
+
+    <!-- Prefetch -->
+
+    <link rel="prefetch" href="cursos.html" as="document">
+    <link rel="prefetch" href="nosotros.html" as="document">
+    
+    <!-- Preload -->
+
+    <link rel="preload" href="css/normalize.css" as="styles">
     <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/styles.css" as="styles">
     <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -36,8 +52,11 @@
         <main class="blog">
             <h3 class="titulo">Nuestro Blog</h3>
             <article class="entrada">
-                <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="Imagen Blog">
+                <div class="entrada__imagen" type="image/webp">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="Imagen Blog">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
@@ -49,7 +68,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="Imagen Blog 2">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp">
+                        <img loading="lazy" src="img/blog2.jpg" alt="Imagen Blog">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
@@ -61,7 +83,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="Imagen Blog 3">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="Imagen Blog">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
@@ -116,5 +141,6 @@
         </div>
     </footer>
 
+    <script src="js/modernizr.js"></script>
 </body>
 </html>
